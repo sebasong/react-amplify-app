@@ -3,12 +3,16 @@ import './App.css';
 import CollapsibleButton from './collapsible.jsx' ;
 import logoImg from "./logo.png";
 
-function Contacts() {
+function App() {
   const [contacts, setContacts] = useState([]);
   const [search, setSearch] = useState('');
   
 
-
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(data => setContacts(data));
+  }, []);
 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(search.toLowerCase())
@@ -35,11 +39,16 @@ function Contacts() {
         <button className="add-contact-button">+ Add New Contact</button>
     </div>
       
-      
+      <div>
+        {filteredContacts.map(contact => (
+          <CollapsibleButton key={contact.id} title={contact.name} className = "CustomButton" contact = {contact}>
+        </CollapsibleButton>
+      ))}
+      </div>
     </div>
   );
 }
 
 
 
-export default Contacts;
+export default App;
