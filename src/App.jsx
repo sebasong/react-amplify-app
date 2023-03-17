@@ -3,7 +3,7 @@ import './App.css';
 import CollapsibleButton from './collapsible.jsx' ;
 import logoImg from "./logo.png";
 
-function Contacts() {
+function App() {
   const [contacts, setContacts] = useState([]);
   const [search, setSearch] = useState('');
   
@@ -51,4 +51,4 @@ function Contacts() {
 
 
 
-export default Contacts;
+export default App;
