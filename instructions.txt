@@ -1,0 +1,22 @@
+Part 0 
+    Open terminal and change the current directory to '...\\react-amplify-app'
+
+Part 1
+    First check the version of node and npm through the following commands on terminal:
+        'node -v'  
+        'npm -v'
+
+    If either 'node' or 'npm' is not recognised the device needs to install nodejs through the following link "https://nodejs.org/en/download"
+
+Part 2
+
+    It is likely that 'react-script' dependency must be added manually if nodejs was never installed on your device. If this is the case, use the following command on terminal:
+        'npm install react-scripts --save'
+
+Part 3
+
+    Run the Application with the following command on terminal:
+        'npm start'
+
+
+Thank you !
